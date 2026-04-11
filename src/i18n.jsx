@@ -521,9 +521,10 @@ export const translations = {
     },
     otIcuCare: {
       title: 'OT & ICU Care',
-      subtitle: 'Advanced Surgical Care with Modern OT & ICU Facilities',
+      subtitle:
+        "Nellore's first non-consultation hospital, designed for doctors to provide advanced surgical and critical care infrastructure for their patients.",
       tagline: 'Safe | Advanced | Affordable Care',
-      heroQuote: 'Because your health deserves the right doctor, at the right place.',
+      heroQuote: 'You operate and we care!',
       whyChooseUs: 'Why Choose Us?',
       whyChooseUsTrust: 'Trusted OT & ICU care for patients and consulting surgeons.',
       whyChoose1: '24/7 Surgical and Critical Care with affordable cost',
@@ -1085,9 +1086,10 @@ export const translations = {
     },
     otIcuCare: {
       title: 'OT & ICU కేర్',
-      subtitle: 'ఆధునిక OT & ICU సౌకర్యాలతో అధునాతన శస్త్రచికిత్స సంరక్షణ',
+      subtitle:
+        'నెల్లూరులో మొదటిదైన కన్సల్టేషన్ లేని హాస్పిటల్, వైద్యులు తమ రోగుల కోసం అధునాతన శస్త్రచికిత్స మరియు క్లిష్టమైన సంరక్షణకు అవసరమైన మౌలిక సదుపాయాలను అందించేలా రూపొందించబడింది.',
       tagline: 'సురక్షితం | అధునాతనం | సరసమైన సంరక్షణ',
-      heroQuote: 'ఎందుకంటే మీ ఆరోగ్యం సరైన వైద్యుడిని, సరైన స్థలంలో అర్హత కలిగి ఉంటుంది.',
+      heroQuote: 'మీరు ఆపరేట్ చేస్తారు, మేము సంరక్షిస్తాము!',
       whyChooseUs: 'మమ్మల్ని ఎందుకు ఎంచుకోవాలి?',
       whyChooseUsTrust: 'రోగులు మరియు కన్సల్టింగ్ సర్జన్‌ల కోసం విశ్వసనీయ OT & ICU కేర్.',
       whyChoose1: 'సరసమైన ఖర్చుతో 24/7 శస్త్రచికిత్స మరియు క్లిష్టమైన సంరక్షణ',

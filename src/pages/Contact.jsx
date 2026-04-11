@@ -3,8 +3,7 @@ import { useState } from 'react'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import { useToast } from '../components/Toast'
-
-const GOOGLE_MAPS_SEARCH_BASE = 'https://www.google.com/maps/search/?api=1&query='
+import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
 
 export default function Contact() {
   const { t } = useI18n()
@@ -187,7 +186,7 @@ export default function Contact() {
             <h2>{t.contact.sectionOtIcuCare}</h2>
             <div className="contact-info-grid">
               <a
-                href={`${GOOGLE_MAPS_SEARCH_BASE}${encodeURIComponent(t.otIcuCare.address)}`}
+                href={NELLORE_OT_ICU_GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-card-modern contact-card-interactive"

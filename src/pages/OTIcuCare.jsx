@@ -12,11 +12,10 @@ import {
   Handshake
 } from 'lucide-react'
 import otIcuLogo from '../assets/new page logo.jpeg'
-
-const GOOGLE_MAPS_SEARCH_BASE = 'https://www.google.com/maps/search/?api=1&query='
+import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
 
 export default function OTIcuCare() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
 
   const whyChooseItems = [
     { text: t.otIcuCare.whyChoose1, Icon: Clock },
@@ -85,7 +84,12 @@ export default function OTIcuCare() {
                   </h1>
                   <div className="ot-icu-divider"></div>
                 </div>
-                <h2 className="ot-icu-subtitle">{t.otIcuCare.subtitle}</h2>
+                <div
+                  className="ot-icu-lead"
+                  lang={lang === 'te' ? 'te' : 'en'}
+                >
+                  <p className="ot-icu-subtitle">{t.otIcuCare.subtitle}</p>
+                </div>
                 <div className="ot-icu-tagline" role="list" aria-label={t.otIcuCare.tagline}>
                   {t.otIcuCare.tagline.split(/\s*\|\s*/).map((part, i, arr) => (
                     <span key={i}>
@@ -196,7 +200,7 @@ export default function OTIcuCare() {
             </h2>
             <div className="contact-info-grid">
               <a
-                href={`${GOOGLE_MAPS_SEARCH_BASE}${encodeURIComponent(t.otIcuCare.address)}`}
+                href={NELLORE_OT_ICU_GOOGLE_MAPS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact-card-modern contact-card-interactive"

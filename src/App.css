@@ -12198,7 +12198,7 @@ body {
   animation: heroGroupEnter 0.75s cubic-bezier(0.34, 1.2, 0.64, 1) 0s forwards;
 }
 
-.ot-icu-hero-text-stagger.animate-in > .ot-icu-hero-subtitle { animation-delay: 0.35s; }
+.ot-icu-hero-text-stagger.animate-in > .ot-icu-lead { animation-delay: 0.35s; }
 .ot-icu-hero-text-stagger.animate-in > .ot-icu-tagline { animation-delay: 0.5s; }
 .ot-icu-hero-text-stagger.animate-in > .ot-icu-quote { animation-delay: 0.65s; }
 
@@ -12304,12 +12304,44 @@ body {
   border-radius: 2px;
 }
 
+/* Hero value prop — readable in EN/TE; glass panel + first-line emphasis */
+.ot-icu-lead {
+  width: 100%;
+  max-width: min(36rem, 100%);
+  margin: 0 auto 14px;
+  padding: 1.05rem 1.2rem 1.1rem 1.15rem;
+  border-radius: 14px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.58) 0%,
+    rgba(255, 255, 255, 0.28) 100%
+  );
+  border: 1px solid rgba(42, 91, 108, 0.12);
+  border-inline-start: 4px solid #4d8f9e;
+  box-shadow:
+    0 4px 22px rgba(42, 91, 108, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 .ot-icu-subtitle {
-  font-size: 1.35rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #1f4452;
+  margin: 0;
+  line-height: 1.68;
+  max-width: none;
+  text-wrap: balance;
+  letter-spacing: 0.015em;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+.ot-icu-subtitle::first-line {
   font-weight: 700;
-  color: #4d8f9e;
-  margin: 0 0 7px;
-  line-height: 1.45;
+  color: #2a5b6c;
+  letter-spacing: 0.01em;
 }
 
 .ot-icu-tagline {
@@ -12346,10 +12378,11 @@ body {
 
 .ot-icu-quote {
   display: flex;
-  align-items: flex-start;
-  gap: 6px;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 28px;
-  max-width: 520px;
+  max-width: min(32rem, 100%);
+  text-align: center;
 }
 
 .ot-icu-quote-mark {
@@ -12369,20 +12402,22 @@ body {
 }
 
 .ot-icu-quote p {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #1a3a47;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #1a4a5a;
   font-style: italic;
   margin: 0;
-  line-height: 1.65;
-  letter-spacing: 0.02em;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
-  transition: color 0.25s ease, opacity 0.25s ease;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 16px rgba(42, 91, 108, 0.12);
+  transition: color 0.25s ease;
 }
 
 .ot-icu-quote:hover p {
-  color: #2a5b6c;
-  opacity: 1;
+  color: #0f3d4d;
 }
 
 .ot-icu-section {
@@ -12931,8 +12966,15 @@ body {
     font-size: 2.2rem;
   }
   
+  .ot-icu-lead {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
   .ot-icu-subtitle {
-    font-size: 1.15rem;
+    font-size: 0.98rem;
+    line-height: 1.66;
   }
   
   .ot-icu-tagline {
@@ -12941,6 +12983,7 @@ body {
   
   .ot-icu-quote p {
     font-size: 1.05rem;
+    letter-spacing: 0.03em;
   }
   
   .ot-icu-badge {
