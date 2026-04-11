@@ -524,7 +524,7 @@ export const translations = {
       subtitle:
         "Nellore's first non-consultation hospital, designed for doctors to provide advanced surgical and critical care infrastructure for their patients.",
       tagline: 'Safe | Advanced | Affordable Care',
-      heroQuote: 'You operate and we care!',
+      heroQuote: 'You Operate and We Care!!',
       whyChooseUs: 'Why Choose Us?',
       whyChooseUsTrust: 'Trusted OT & ICU care for patients and consulting surgeons.',
       whyChoose1: '24/7 Surgical and Critical Care with affordable cost',
