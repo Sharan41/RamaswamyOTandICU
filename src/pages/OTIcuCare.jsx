@@ -1,5 +1,6 @@
 import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer } from '../components/AnimatedSection'
+import PhotoGallery from '../components/PhotoGallery'
 import {
   Hospital,
   Activity,
@@ -13,6 +14,21 @@ import {
 } from 'lucide-react'
 import otIcuLogo from '../assets/new page logo.jpeg'
 import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
+import otIcuImage1 from '../assets/WhatsApp Image 2026-04-19 at 11.51.27 (1).jpeg?format=webp&w=800&quality=75'
+import otIcuImage2 from '../assets/WhatsApp Image 2026-04-19 at 11.51.27.jpeg?format=webp&w=800&quality=75'
+import otIcuImage3 from '../assets/WhatsApp Image 2026-04-19 at 11.51.28 (1).jpeg?format=webp&w=800&quality=75'
+import otIcuImage4 from '../assets/WhatsApp Image 2026-04-19 at 11.51.28 (2).jpeg?format=webp&w=800&quality=75'
+import otIcuImage5 from '../assets/WhatsApp Image 2026-04-19 at 11.51.28.jpeg?format=webp&w=800&quality=75'
+import otIcuImage6 from '../assets/WhatsApp Image 2026-04-19 at 11.51.29 (1).jpeg?format=webp&w=800&quality=75'
+import otIcuImage7 from '../assets/WhatsApp Image 2026-04-19 at 11.51.29 (2).jpeg?format=webp&w=800&quality=75'
+import otIcuImage8 from '../assets/WhatsApp Image 2026-04-19 at 11.51.29.jpeg?format=webp&w=800&quality=75'
+import otIcuImage9 from '../assets/WhatsApp Image 2026-04-19 at 11.51.30.jpeg?format=webp&w=800&quality=75'
+import otIcuImage10 from '../assets/WhatsApp Image 2026-04-19 at 11.51.31 (1).jpeg?format=webp&w=800&quality=75'
+import otIcuImage11 from '../assets/WhatsApp Image 2026-04-19 at 11.51.31.jpeg?format=webp&w=800&quality=75'
+import otIcuImage12 from '../assets/WhatsApp Image 2026-04-19 at 11.51.32 (1).jpeg?format=webp&w=800&quality=75'
+import otIcuImage13 from '../assets/WhatsApp Image 2026-04-19 at 11.51.32 (2).jpeg?format=webp&w=800&quality=75'
+import otIcuImage14 from '../assets/WhatsApp Image 2026-04-19 at 11.51.32.jpeg?format=webp&w=800&quality=75'
+import otIcuImage15 from '../assets/WhatsApp Image 2026-04-19 at 11.51.33.jpeg?format=webp&w=800&quality=75'
 
 export default function OTIcuCare() {
   const { t, lang } = useI18n()
@@ -44,6 +60,24 @@ export default function OTIcuCare() {
     { title: t.otIcuCare.feature2, Icon: Activity },   // ICU / monitor
     { title: t.otIcuCare.feature3, Icon: Users },      // Team
     { title: t.otIcuCare.feature4, Icon: Workflow }    // Coordination / seamless workflow
+  ]
+
+  const galleryImages = [
+    { src: otIcuImage1, alt: 'OT & ICU Facility 1', caption: 'Advanced OT & ICU Infrastructure' },
+    { src: otIcuImage2, alt: 'OT & ICU Facility 2', caption: 'Critical Care Setup' },
+    { src: otIcuImage3, alt: 'OT & ICU Facility 3', caption: 'Modern Operation Theatre' },
+    { src: otIcuImage4, alt: 'OT & ICU Facility 4', caption: 'Intensive Care Unit' },
+    { src: otIcuImage5, alt: 'OT & ICU Facility 5', caption: 'Patient Monitoring & Support' },
+    { src: otIcuImage6, alt: 'OT & ICU Facility 6', caption: 'Specialized ICU Care' },
+    { src: otIcuImage7, alt: 'OT & ICU Facility 7', caption: 'Advanced Surgical Environment' },
+    { src: otIcuImage8, alt: 'OT & ICU Facility 8', caption: 'Post-Operative Care Area' },
+    { src: otIcuImage9, alt: 'OT & ICU Facility 9', caption: 'Emergency & Critical Care Readiness' },
+    { src: otIcuImage10, alt: 'OT & ICU Facility 10', caption: 'State-of-the-Art Equipment' },
+    { src: otIcuImage11, alt: 'OT & ICU Facility 11', caption: 'Dedicated Critical Care Team Facilities' },
+    { src: otIcuImage12, alt: 'OT & ICU Facility 12', caption: 'Clean and Spacious Clinical Environment' },
+    { src: otIcuImage13, alt: 'OT & ICU Facility 13', caption: 'Comprehensive OT & ICU Services' },
+    { src: otIcuImage14, alt: 'OT & ICU Facility 14', caption: 'Integrated Surgical and ICU Care' },
+    { src: otIcuImage15, alt: 'OT & ICU Facility 15', caption: 'Round-the-Clock Critical Care Support' }
   ]
 
   return (
@@ -189,6 +223,13 @@ export default function OTIcuCare() {
           </div>
         </div>
       </FadeIn>
+
+      {/* Photo Gallery */}
+      <PhotoGallery
+        images={galleryImages}
+        title={t.about.photoGallery}
+        previewCount={8}
+      />
 
       {/* Contact Section — same styling as Contact & Location page (modern cards, circular icons, action links) */}
       <FadeIn>
