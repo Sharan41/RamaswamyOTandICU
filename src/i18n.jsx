@@ -406,6 +406,9 @@ export const translations = {
       customSubjectLabel: 'Custom Subject (if Other selected)',
       yourMessage: 'Your Message',
       howDidYouKnow: 'How did you know about us?',
+      selectBranch: 'Select Branch',
+      branchKavali: 'Kavali',
+      branchNellore: 'Nellore',
       sendMessage: 'Send Message',
       sending: 'Sending...',
       // Contact Form
@@ -987,6 +990,9 @@ export const translations = {
       customSubjectLabel: 'అనుకూల విషయం (ఇతర ఎంచుకుంటే)',
       yourMessage: 'మీ సందేశం',
       howDidYouKnow: 'మా గురించి మీకు ఎలా తెలిసింది?',
+      selectBranch: 'శాఖను ఎంచుకోండి',
+      branchKavali: 'కావలి',
+      branchNellore: 'నెల్లూరు',
       sendMessage: 'సందేశం పంపండి',
       sending: 'పంపుతోంది...',
       // Contact Form

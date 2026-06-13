@@ -5948,7 +5948,8 @@ body {
   border-radius: 25px;
   font-size: 0.8rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 20px rgba(42, 91, 108, 0.3);
@@ -5967,16 +5968,16 @@ body {
 }
 
 .hero-title-new {
-  font-size: 3.5rem;
+  font-size: 2.6rem;
   color: var(--brand-dark);
-  margin: 0 0 24px 0;
-  line-height: 1.2;
+  margin: 0 0 20px 0;
+  line-height: 1.25;
   font-weight: 900;
-  text-shadow: 
+  text-shadow:
     3px 3px 10px rgba(255, 255, 255, 0.95),
     -1px -1px 5px rgba(255, 255, 255, 0.9),
     0 0 30px rgba(255, 255, 255, 0.7);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
 }
 
 .hero-subtitle-new {
@@ -6002,8 +6003,8 @@ body {
 }
 
 .btn-outline-large {
-  padding: 16px 48px;
-  font-size: 1.1rem;
+  padding: 12px 32px;
+  font-size: 0.95rem;
   font-weight: 700;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
@@ -6940,6 +6941,8 @@ body {
 
 /* Hero Section Buttons - Transparent Glass Effect */
 .hero-section-new .btn-large {
+  padding: 12px 32px;
+  font-size: 0.95rem;
   background: rgba(42, 91, 108, 0.85);
   backdrop-filter: blur(10px);
   border: 2px solid var(--brand);
@@ -9024,9 +9027,9 @@ body {
   }
 
   .hero-title-new {
-    font-size: 1.85rem;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-bottom: 16px;
   }
 
   .hero-subtitle-new {

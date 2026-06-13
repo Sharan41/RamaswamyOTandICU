@@ -515,7 +515,7 @@ export default function Home() {
             {/* Instagram Widget - Desktop Only */}
             <div className="instagram-embed-wrapper instagram-desktop-only">
               <iframe
-                src="https://www.instagram.com/drramaswamyhospitals_kavali/embed/"
+                src="https://www.instagram.com/drhoticu_nellore/embed/"
                 width="100%"
                 height="480"
                 frameBorder="0"
@@ -529,8 +529,8 @@ export default function Home() {
             {/* Instagram Preview Card - Mobile Only */}
             <div className="instagram-embed-wrapper instagram-mobile-only">
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals_kavali/" 
-                target="_blank" 
+                href="https://www.instagram.com/drhoticu_nellore/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="instagram-preview-card"
               >
@@ -565,8 +565,8 @@ export default function Home() {
               </a>
 
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals_kavali/" 
-                target="_blank" 
+                href="https://www.instagram.com/drhoticu_nellore/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="instagram-follow-btn"
               >
@@ -624,6 +624,14 @@ export default function Home() {
               <div className="form-group">
                 <label htmlFor="feedback-phone" className="visually-hidden">{t.contact.phoneNumber} *</label>
                 <input type="tel" id="feedback-phone" name="phone" placeholder={t.contact.phoneNumber} required aria-required="true" />
+              </div>
+              <div className="form-group">
+                <label htmlFor="feedback-branch" className="visually-hidden">{t.contact.selectBranch} *</label>
+                <select id="feedback-branch" name="branch" required className="feedback-select" aria-required="true">
+                  <option value="">{t.contact.selectBranch} *</option>
+                  <option value="Kavali">{t.contact.branchKavali}</option>
+                  <option value="Nellore">{t.contact.branchNellore}</option>
+                </select>
               </div>
               <div className="form-group">
                 <label htmlFor="feedback-subject" className="visually-hidden">{t.contact.selectSubject} *</label>
