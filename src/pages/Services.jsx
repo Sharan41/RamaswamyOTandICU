@@ -2,6 +2,7 @@ import { useI18n } from '../i18n'
 import { Link } from 'react-router-dom'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
+import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
 import servicesHeroImage from '../assets/WhatsApp Image 2025-10-23 at 18.07.55.jpeg?format=webp&w=1200&quality=80'
 
 export default function Services() {
@@ -66,7 +67,7 @@ export default function Services() {
             <p>{t.services.ctaDesc}</p>
             <div className="services-cta-actions">
               <a 
-                href="tel:+919912757854" 
+                href="tel:+917599307777" 
                 className="btn btn-large btn-with-icon"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -74,8 +75,10 @@ export default function Services() {
                 </svg>
                 {t.services.callNow}
               </a>
-              <Link 
-                to="/contact"
+              <a 
+                href={NELLORE_OT_ICU_GOOGLE_MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-outline-large btn-with-icon"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -83,7 +86,7 @@ export default function Services() {
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
                 {t.services.visitUs}
-              </Link>
+              </a>
             </div>
           </div>
         </section>

@@ -2,6 +2,7 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import PhotoGallery from '../components/PhotoGallery'
+import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from '../locationLinks'
 import facilitiesHeroImage from '../assets/WhatsApp Image 2025-10-10 at 13.48.48.jpeg?format=webp&w=800&quality=75'
 
 // Import facility images for gallery (WebP optimized)
@@ -155,7 +156,7 @@ export default function Facilities() {
           </div>
           <h2>{t.facilities.visitUs}</h2>
           <p>{t.facilities.visitUsText}</p>
-          <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noreferrer" className="btn btn-large">
+          <a href={NELLORE_OT_ICU_GOOGLE_MAPS_URL} target="_blank" rel="noreferrer" className="btn btn-large">
             {t.facilities.getDirections}
           </a>
         </div>
