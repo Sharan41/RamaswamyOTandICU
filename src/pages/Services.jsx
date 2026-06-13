@@ -7,43 +7,18 @@ import servicesHeroImage from '../assets/WhatsApp Image 2025-10-23 at 18.07.55.j
 export default function Services() {
   const { t } = useI18n()
   
-  const services = [
-    { 
-      title: t.services.generalMedicine, 
-      desc: t.services.generalMedicineDesc,
-      category: "Primary Care",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-    },
-    { 
-      title: t.services.orthopedics, 
-      desc: t.services.orthopedicsDesc,
-      category: "Specialized Care",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2v6m6-6v6m-4 8h.01M10 22h4a2 2 0 002-2V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v16a2 2 0 002 2z"/></svg>
-    },
-    { 
-      title: t.services.urology, 
-      desc: t.services.urologyDesc,
-      category: "Specialized Care",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/><path d="M9 16v2m6-2v2"/></svg>
-    },
-    { 
-      title: t.services.generalSurgery, 
-      desc: t.services.generalSurgeryDesc,
-      category: "Surgical",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 2l-1 1-2-2-2 2-1-1-4 4v6h7v7l4-4 1 1 2-2-1-1 4-4-7-7z"/></svg>
-    },
-    { 
-      title: t.services.neurology, 
-      desc: t.services.neurologyDesc,
-      category: "Specialized Care",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 1 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2m7 10v4m-4 0h8"/></svg>
-    },
-    { 
-      title: t.services.nephrology, 
-      desc: t.services.nephrologyDesc,
-      category: "Specialized Care",
-      icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 2c-1.5 2-3 3.5-3 6s1.5 4 3 4 3-1.5 3-4-1.5-4-3-6zm6 0c-1.5 2-3 3.5-3 6s1.5 4 3 4 3-1.5 3-4-1.5-4-3-6z"/><path d="M12 14v8"/></svg>
-    },
+  const specialities = [
+    'Day Care OT & ICU\'s',
+    'IP Admissions',
+    'Orthopedics',
+    'Spine Surgeries',
+    'Urology',
+    'Gynecology & Obstetrics',
+    'Surgical Gastro',
+    'ENT',
+    'General Surgery',
+    'Proctology',
+    'Varicose veins',
   ]
   
   const highlights = [
@@ -91,19 +66,14 @@ export default function Services() {
         </div>
       </ScaleIn>
 
-      {/* Services Grid */}
+      {/* Specialities Grid */}
       <div style={{ marginTop: 64 }}>
-        <FadeIn>
-          <h2 className="section-heading">{t.services.medicalServices}</h2>
-        </FadeIn>
-        
         <StaggerContainer className="services-grid-new">
-          {services.map((service, index) => (
+          {specialities.map((speciality, index) => (
             <div key={index} className="service-card-new">
               <div className="service-card-content">
-                <div className="service-card-category">{service.category}</div>
-                <h3 className="service-card-title">{service.title}</h3>
-                <p className="service-card-desc">{service.desc}</p>
+                <div className="service-card-category">{String(index + 1).padStart(2, '0')}</div>
+                <h3 className="service-card-title">{speciality}</h3>
               </div>
             </div>
           ))}

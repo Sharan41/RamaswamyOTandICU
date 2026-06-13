@@ -180,7 +180,7 @@ export const translations = {
       heroCaption: 'Dr.RAMASWAMY HOSPITALS - Serving the community since 1999'
     },
     services: {
-      title: 'Our Services',
+      title: 'OUR Specialities',
       subtitle: 'Here are the services that we offer.',
       ctaTitle: 'Need Medical Assistance?',
       ctaDesc: 'Our expert medical team is here to help you. Schedule a consultation or contact us for emergency care.',
@@ -764,7 +764,7 @@ export const translations = {
       heroCaption: 'Dr.RAMASWAMY HOSPITALS - 1999 నుండి సమాజానికి సేవ చేస్తోంది'
     },
     services: {
-      title: 'మా సేవలు',
+      title: 'మా ప్రత్యేకతలు',
       subtitle: 'ఇక్కడ మేము అందించే సేవలు.',
       ctaTitle: 'వైద్య సహాయం అవసరమా?',
       ctaDesc: 'మా నిపుణుల వైద్య బృందం మీకు సహాయం చేయడానికి ఇక్కడ ఉంది. సంప్రదింపు షెడ్యూల్ చేయండి లేదా అత్యవసర సంరక్షణ కోసం మమ్మల్ని సంప్రదించండి.',

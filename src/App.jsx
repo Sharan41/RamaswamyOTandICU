@@ -4,7 +4,7 @@ import './App.css'
 import { useState, useEffect, useRef } from 'react'
 import crestLogo from './assets/crest-logo.jpg'
 import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from './locationLinks'
-import bannerLogo from './assets/banner-logo-new.jpeg'
+import bannerLogo from './assets/logo-ot-icu.png'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
@@ -228,7 +228,7 @@ function App() {
                 <NavLink to="/facilities" onClick={() => setServicesOpen(false)}>{t.nav.facilities}</NavLink>
               </div>
             </div>
-            <NavLink to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
+            <a href="https://www.ramaswamyhospitals.com/" target="_blank" rel="noopener noreferrer">{t.nav.otIcuCare}</a>
             <div
               ref={blogsRef}
               className={`dropdown ${blogsOpen ? 'open' : ''}`}
@@ -274,7 +274,7 @@ function App() {
           <NavLink onClick={() => setMobileOpen(false)} to="/about" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.about}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/services" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.services}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/facilities" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.facilities}</NavLink>
-          <NavLink onClick={() => setMobileOpen(false)} to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
+          <a href="https://www.ramaswamyhospitals.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>{t.nav.otIcuCare}</a>
           <a
             href="https://thebluesinge.wixsite.com/beyond-treatment"
             onClick={() => setMobileOpen(false)}

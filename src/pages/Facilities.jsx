@@ -88,116 +88,14 @@ export default function Facilities() {
   ]
   
   const facilities = [
-    { 
-      title: t.facilities.facility1Title, 
-      desc: t.facilities.facility1Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg>
-    },
-    { 
-      title: t.facilities.facility2Title, 
-      desc: t.facilities.facility2Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/><path d="M12 2v10"/></svg>
-    },
-    { 
-      title: t.facilities.facility3Title, 
-      desc: t.facilities.facility3Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-    },
-    { 
-      title: t.facilities.facility4Title, 
-      desc: t.facilities.facility4Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-    },
-    { 
-      title: t.facilities.facility5Title, 
-      desc: t.facilities.facility5Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 2l-1 1-2-2-2 2-1-1-4 4v6h7v7l4-4 1 1 2-2-1-1 4-4-7-7z"/></svg>
-    },
-    { 
-      title: t.facilities.facility6Title, 
-      desc: t.facilities.facility6Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>
-    },
-    { 
-      title: t.facilities.facility7Title, 
-      desc: t.facilities.facility7Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    },
-    { 
-      title: t.facilities.facility8Title, 
-      desc: t.facilities.facility8Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-    },
-    { 
-      title: t.facilities.facility9Title, 
-      desc: t.facilities.facility9Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-    },
-    { 
-      title: t.facilities.facility10Title, 
-      desc: t.facilities.facility10Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/><circle cx="12" cy="12" r="3"/></svg>
-    },
-    { 
-      title: t.facilities.facility11Title, 
-      desc: t.facilities.facility11Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility12Title, 
-      desc: t.facilities.facility12Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8m8 4H8m2-8H8"/></svg>
-    },
-    { 
-      title: t.facilities.facility13Title, 
-      desc: t.facilities.facility13Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility14Title, 
-      desc: t.facilities.facility14Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-    },
-    { 
-      title: t.facilities.facility15Title, 
-      desc: t.facilities.facility15Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility16Title, 
-      desc: t.facilities.facility16Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility17Title, 
-      desc: t.facilities.facility17Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility18Title, 
-      desc: t.facilities.facility18Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility19Title, 
-      desc: t.facilities.facility19Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility20Title, 
-      desc: t.facilities.facility20Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
-    { 
-      title: t.facilities.facility21Title, 
-      desc: t.facilities.facility21Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 2l-1 1-2-2-2 2-1-1-4 4v6h7v7l4-4 1 1 2-2-1-1 4-4-7-7z"/></svg>
-    },
-    { 
-      title: t.facilities.facility22Title, 
-      desc: t.facilities.facility22Desc,
-      icon: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 2h10M7 2v12a4 4 0 004 4 4 4 0 004-4V2M7 2L5 4M17 2l2 2"/></svg>
-    },
+    '20+ beds – A/C sharing and private rooms',
+    'Dialysis',
+    'ICU',
+    'Theatre is equipped with all types of monitors, ventilators, higher end C-Arm machines, laparoscopy set, etc.',
+    'Very own RO Plant',
+    'Lab has fully automated with highly qualified technicians doing their job.',
+    'Higher-end portable X-ray which is taken care by highly trained staff.',
+    'Around the clock duty doctors to serve and take good care of the patients.',
   ]
 
   const highlights = [
@@ -259,10 +157,6 @@ export default function Facilities() {
 
       {/* Facilities Grid */}
       <div style={{ marginTop: 64 }}>
-        <FadeIn>
-          <h2 className="section-heading">{t.facilities.facilitiesHeading}</h2>
-        </FadeIn>
-        
         <StaggerContainer className="facilities-grid-new">
           {facilities.map((facility, index) => (
             <div key={index} className="facility-card-new">
@@ -270,8 +164,7 @@ export default function Facilities() {
                 {String(index + 1).padStart(2, '0')}
               </div>
               <div className="facility-card-body">
-                <h3>{facility.title}</h3>
-                <p>{facility.desc}</p>
+                <h3>{facility}</h3>
               </div>
             </div>
           ))}
