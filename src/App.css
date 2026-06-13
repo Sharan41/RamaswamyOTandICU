@@ -1,12 +1,12 @@
 :root {
-  --brand: #00bbd1;       /* Primary cyan from brand kit */
-  --brand-dark: #1f3e75;
-  --brand-light: #00e0ea;
+  --brand: #1f3e75;       /* Dark navy - primary text/heading color */
+  --brand-dark: #162d57;
+  --brand-light: #00bbd1; /* Cyan - accent/highlight color */
   --text: #0f172a;
   --muted: #64748b;
   --bg: #fcf8f6;          /* Light background */
-  --accent: #b0bca1;      /* Sage */
-  --accent-light: #c5d1b7;
+  --accent: #00bbd1;      /* Cyan accent */
+  --accent-light: #00e0ea;
   --sand: #e7e5d7;        /* Light warm */
   --slate: #96a1a8;       /* Cool gray */
   --white: #ffffff;
@@ -1080,12 +1080,12 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 
 .quick-action-btn:nth-child(4) {
   /* Feedback button - accent color */
-  background: linear-gradient(135deg, var(--accent), #9db08e);
+  background: linear-gradient(135deg, var(--accent), #009db3);
   color: var(--text);
 }
 
 .quick-action-btn:nth-child(4):hover {
-  background: linear-gradient(135deg, #9db08e, var(--accent));
+  background: linear-gradient(135deg, #009db3, var(--accent));
   color: var(--text);
 }
 
@@ -3545,7 +3545,7 @@ body {
   position: relative;
   border-radius: 24px;
   overflow: visible;
-  background: linear-gradient(135deg, #b0bca1 0%, #8ba89f 30%, #6b9099 70%, #5a8a93 100%);
+  background: linear-gradient(135deg, #00bbd1 0%, #009db3 30%, #1f3e75 70%, #1a3560 100%);
   padding: 48px;
   display: flex;
   flex-direction: column;
@@ -5953,7 +5953,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 4px 20px rgba(0, 187, 209, 0.3);
-  border: 2px solid var(--brand);
+  border: 2px solid var(--brand-light);
   transition: all 0.3s ease;
 }
 
@@ -6943,12 +6943,12 @@ body {
 .hero-section-new .btn-large {
   padding: 12px 32px;
   font-size: 0.95rem;
-  background: rgba(0, 187, 209, 0.85);
+  background: var(--brand);
   backdrop-filter: blur(10px);
   border: 2px solid var(--brand);
   color: white;
   font-weight: 700;
-  box-shadow: 0 4px 20px rgba(0, 187, 209, 0.3);
+  box-shadow: 0 4px 20px rgba(31, 62, 117, 0.3);
 }
 
 .hero-section-new .btn-large:hover {
@@ -10307,7 +10307,7 @@ body {
 .view-xray-button {
   margin-top: 16px;
   padding: 12px 24px;
-  background: linear-gradient(135deg, var(--brand) 0%, #1e4d5c 100%);
+  background: linear-gradient(135deg, var(--brand) 0%, #162d57 100%);
   color: white;
   border: none;
   border-radius: 8px;
@@ -10335,7 +10335,7 @@ body {
 
 .view-xray-button:hover {
   transform: scale(1.05);
-  background: linear-gradient(135deg, #00bbd1 0%, #1e4d5c 100%);
+  background: linear-gradient(135deg, #00bbd1 0%, #162d57 100%);
   box-shadow: 0 6px 20px rgba(0, 187, 209, 0.4);
 }
 
@@ -11587,7 +11587,7 @@ body {
 }
 
 .testimonials-visual {
-  background: linear-gradient(135deg, #1e3a5f, #2c5f7c, var(--brand));
+  background: linear-gradient(135deg, var(--brand-dark), var(--brand-light), var(--brand));
   border-radius: 20px;
   padding: 50px 45px;
   position: relative;
@@ -12565,7 +12565,7 @@ body {
 .ot-icu-divider {
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #00bbd1, #4d8f9e);
+  background: linear-gradient(90deg, #00bbd1, #1f3e75);
   margin: 16px auto 10px;
   border-radius: 2px;
 }
