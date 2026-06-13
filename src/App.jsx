@@ -4,7 +4,7 @@ import './App.css'
 import { useState, useEffect, useRef } from 'react'
 import crestLogo from './assets/crest-logo.jpg'
 import { NELLORE_OT_ICU_GOOGLE_MAPS_URL } from './locationLinks'
-import bannerLogo from './assets/logo-ot-icu.png'
+import bannerLogo from './assets/new page logo copy.jpeg'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Breadcrumbs from './components/Breadcrumbs.jsx'
 import LanguageModal from './components/LanguageModal.jsx'
@@ -80,6 +80,20 @@ function App() {
           <div className="topbar-left">
             <img src={crestLogo} alt="Dr.RAMASWAMY HOSPITALS" className="topbar-logo" />
             <div className="topbar-locations">
+              <a href={NELLORE_OT_ICU_GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="topbar-item topbar-location-item topbar-address" aria-label="Nellore (OT & ICU Care) – Open in Google Maps">
+                <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span className="topbar-location-label">{t.topbar.nellore}</span>
+                <span className="topbar-location-tooltip" role="tooltip">
+                  <span className="topbar-tooltip-arrow" aria-hidden="true" />
+                  <span className="topbar-tooltip-inner">
+                    <span className="topbar-tooltip-address">{t.otIcuCare.address}</span>
+                    <span className="topbar-tooltip-action">{t.contact.viewMaps} →</span>
+                  </span>
+                </span>
+              </a>
               <a href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" target="_blank" rel="noopener noreferrer" className="topbar-item topbar-location-item topbar-address" aria-label="Kavali – Open in Google Maps">
                 <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -94,20 +108,6 @@ function App() {
                       {t.contact.addressLine2}<br />
                       {t.contact.addressLine3}
                     </span>
-                    <span className="topbar-tooltip-action">{t.contact.viewMaps} →</span>
-                  </span>
-                </span>
-              </a>
-              <a href={NELLORE_OT_ICU_GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="topbar-item topbar-location-item topbar-address" aria-label="Nellore (OT & ICU Care) – Open in Google Maps">
-                <svg className="topbar-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <span className="topbar-location-label">{t.topbar.nellore}</span>
-                <span className="topbar-location-tooltip" role="tooltip">
-                  <span className="topbar-tooltip-arrow" aria-hidden="true" />
-                  <span className="topbar-tooltip-inner">
-                    <span className="topbar-tooltip-address">{t.otIcuCare.address}</span>
                     <span className="topbar-tooltip-action">{t.contact.viewMaps} →</span>
                   </span>
                 </span>
