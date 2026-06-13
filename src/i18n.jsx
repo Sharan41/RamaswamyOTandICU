@@ -63,7 +63,7 @@ export const translations = {
       lookingForOtIcuFeature3: 'Experienced Medical & Nursing Team',
       lookingForOtIcuFeature4: 'Seamless coordination for surgeries',
       lookingForOtIcuCta: 'One trusted destination for safe surgeries and critical care.',
-      exploreServices: 'Explore Services',
+      exploreServices: 'Explore Specialities',
       callEmergency: 'Emergency Call',
       discoverFacilities: 'Discover Facilities',
       hiringBanner: 'We are hiring GENERAL SURGEON and UROLOGIST. Call',
@@ -177,7 +177,7 @@ export const translations = {
       value3Desc: 'We continuously invest in advanced medical technology and stay updated with the latest healthcare innovations.',
       value4Title: 'Integrity',
       value4Desc: 'We maintain transparency and honesty in all our interactions, building trust with patients and their families.',
-      heroCaption: 'Dr.RAMASWAMY HOSPITALS - Serving the community since 1999'
+      heroCaption: 'Dr. Ramaswamy Hospitals OT and ICU Care'
     },
     services: {
       title: 'OUR Specialities',
@@ -647,7 +647,7 @@ export const translations = {
       lookingForOtIcuFeature3: 'అనుభవజ్ఞులైన వైద్య & నర్సింగ్ బృందం',
       lookingForOtIcuFeature4: 'శస్త్రచికిత్సల కోసం సజావుగా సమన్వయం',
       lookingForOtIcuCta: 'సురక్షితమైన శస్త్రచికిత్సలు మరియు క్లిష్టమైన సంరక్షణ కోసం ఒక నమ్మదగిన గమ్యస్థానం.',
-      exploreServices: 'సేవలను అన్వేషించండి',
+      exploreServices: 'ప్రత్యేకతలను అన్వేషించండి',
       callEmergency: 'ఎమర్జెన్సీ కాల్',
       discoverFacilities: 'సౌకర్యాలను కనుగొనండి',
       hiringBanner: 'మేము జనరల్ సర్జన్ మరియు యూరాలజిస్ట్‌ను నియమిస్తున్నాము. కాల్ చేయండి',
@@ -761,7 +761,7 @@ export const translations = {
       value3Desc: 'మేము అధునాతన వైద్య సాంకేతికతలో నిరంతరం పెట్టుబడి పెడుతూ, తాజా ఆరోగ్య సంరక్షణ ఆవిష్కరణలతో నవీకరించబడి ఉంటాము.',
       value4Title: 'సమగ్రత',
       value4Desc: 'మేము మా అన్ని పరస్పర చర్యలలో పారదర్శకత మరియు నిజాయితీని కొనసాగిస్తాము, రోగులు మరియు వారి కుటుంబాలతో నమ్మకాన్ని నిర్మిస్తాము.',
-      heroCaption: 'Dr.RAMASWAMY HOSPITALS - 1999 నుండి సమాజానికి సేవ చేస్తోంది'
+      heroCaption: 'డాక్టర్. రామస్వామి హాస్పిటల్స్ - OT మరియు ICU కేర్'
     },
     services: {
       title: 'మా ప్రత్యేకతలు',

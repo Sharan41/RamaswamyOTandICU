@@ -8,6 +8,8 @@
   --accent: #00bbd1;      /* Cyan accent */
   --accent-light: #00e0ea;
   --sand: #e7e5d7;        /* Light warm */
+  --nav-hover: rgba(0, 187, 209, 0.12);
+  --nav-hover-strong: rgba(0, 187, 209, 0.18);
   --slate: #96a1a8;       /* Cool gray */
   --white: #ffffff;
   --shadow-sm: 0 2px 8px rgba(0, 187, 209, 0.08);
@@ -521,7 +523,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   flex-shrink: 0;
 }
 .nav a:hover { 
-  background: var(--sand); 
+  background: var(--nav-hover); 
   color: var(--brand);
   transform: translateY(-1px);
 }
@@ -561,7 +563,7 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   font-family: inherit;
 }
 .dropdown-trigger:hover {
-  background: var(--sand);
+  background: var(--nav-hover);
   color: var(--brand);
   transform: translateY(-1px);
 }
@@ -611,9 +613,9 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   margin-bottom: 0;
 }
 .dropdown .menu a:hover { 
-  background: linear-gradient(90deg, var(--sand), var(--white));
+  background: linear-gradient(90deg, var(--nav-hover), var(--white));
   color: var(--brand);
-  border-left-color: var(--brand);
+  border-left-color: var(--brand-light);
   transform: translateX(4px);
 }
 .dropdown .menu a:active {
@@ -2169,16 +2171,16 @@ body {
 }
 
 .mobile-menu a:hover { 
-  background: var(--sand);
+  background: var(--nav-hover);
   color: var(--brand);
-  border-left-color: var(--brand);
+  border-left-color: var(--brand-light);
   padding-left: 32px;
 }
 
 .mobile-menu a.active { 
-  background: linear-gradient(90deg, var(--sand), transparent);
+  background: linear-gradient(90deg, var(--nav-hover-strong), transparent);
   color: var(--brand);
-  border-left-color: var(--brand);
+  border-left-color: var(--brand-light);
   font-weight: 600;
 }
 /* OT & ICU Care in mobile: same light beige + dark teal (default and hover) */
@@ -3646,12 +3648,37 @@ body {
   filter: brightness(1.05) contrast(1.05);
 }
 
+.animated-hospital-image .about-hero-logo-img {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  object-fit: contain;
+  animation: floatAnimation 6s ease-in-out infinite;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow:
+    0 25px 60px rgba(0, 187, 209, 0.3),
+    0 12px 24px rgba(0, 187, 209, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.animated-hospital-image:hover .about-hero-logo-img {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow:
+    0 35px 80px rgba(0, 187, 209, 0.4),
+    0 20px 40px rgba(0, 187, 209, 0.3),
+    0 0 40px rgba(0, 187, 209, 0.2);
+  animation-play-state: paused;
+}
+
 .animated-hospital-image:hover .hospital-building-img {
   transform: scale(1.05) translateY(-10px);
   box-shadow: 
     0 35px 80px rgba(0, 187, 209, 0.4),
     0 20px 40px rgba(0, 187, 209, 0.3),
-    0 0 40px rgba(176, 188, 161, 0.3);
+    0 0 40px rgba(0, 187, 209, 0.2);
   animation-play-state: paused;
   filter: brightness(1.1) contrast(1.1);
 }
@@ -5108,7 +5135,7 @@ body {
   line-height: 1.7;
 }
 
-/* Contact page: two divisions — Consultations (blue header) & OT&ICU Care (olive header) */
+/* Contact page: two divisions — Nellore (blue header) & Kavali (olive header) */
 .contact-page-section {
   margin-bottom: 48px;
 }
@@ -5124,7 +5151,7 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #00bbd1 0%, #1f3e75 100%);
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
   border-radius: 12px;
   color: #fff !important;
   text-align: center;
@@ -5144,7 +5171,7 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  background: linear-gradient(135deg, #00bbd1 0%, #1f3e75 100%);
   border-radius: 12px;
   color: #fff !important;
   text-align: center;
@@ -8018,10 +8045,10 @@ body {
 
 .facility-card-body h3 {
   color: var(--text);
-  font-size: 1.3rem;
-  margin: 0 0 12px 0;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .facility-card-body p {
@@ -8708,7 +8735,8 @@ body {
     max-width: 280px;
   }
 
-  .animated-hospital-image .hospital-building-img {
+  .animated-hospital-image .hospital-building-img,
+  .animated-hospital-image .about-hero-logo-img {
     max-width: 320px;
   }
 
@@ -9393,9 +9421,10 @@ body {
     padding: 12px;
   }
 
-  .animated-hospital-image .hospital-building-img {
+  .animated-hospital-image .hospital-building-img,
+  .animated-hospital-image .about-hero-logo-img {
     max-width: 100%;
-    padding: 0;
+    padding: 16px 18px;
   }
 
   .image-glow-effect {
@@ -9403,7 +9432,8 @@ body {
     height: 280px;
   }
   
-  .animated-hospital-image:hover .hospital-building-img {
+  .animated-hospital-image:hover .hospital-building-img,
+  .animated-hospital-image:hover .about-hero-logo-img {
     transform: scale(1.03) translateY(-5px);
   }
 
@@ -9711,7 +9741,8 @@ body {
   }
 
   .facility-card-body h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   .facility-card-body p {
@@ -13086,11 +13117,11 @@ body {
 
 /* Contact Us — reach-out card with teal header strip (distinct from rest of site) */
 .ot-icu-contact {
-  background: #eee9dd;
+  background: rgba(0, 187, 209, 0.06);
   padding: 0;
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0, 187, 209, 0.12);
-  border: 2px solid rgba(98, 166, 184, 0.35);
+  border: 2px solid rgba(0, 187, 209, 0.25);
   overflow: hidden;
 }
 
@@ -13105,7 +13136,7 @@ body {
   font-weight: 700;
   margin: 0;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  background: linear-gradient(135deg, #00bbd1 0%, #1f3e75 100%);
   border-radius: 12px;
   color: #fff !important;
   text-align: center;
@@ -13222,6 +13253,111 @@ body {
 
 .ot-icu-contact .contact-card-action::after {
   background: #62a6b8;
+}
+
+/* Kavali contact section — olive theme */
+.kavali-contact {
+  background: #eee9dd;
+  padding: 0;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(135, 153, 111, 0.15);
+  border: 2px solid rgba(117, 138, 94, 0.35);
+  overflow: hidden;
+}
+
+.kavali-contact .contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kavali-contact .contact-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  border-radius: 12px;
+  color: #fff !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.kavali-contact .contact-content h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.kavali-contact .contact-info-grid {
+  margin-top: 0;
+  padding: 20px 18px 28px;
+  gap: 16px;
+}
+
+.kavali-contact .contact-card-modern {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 24px 20px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(117, 138, 94, 0.3);
+  box-shadow: 0 2px 12px rgba(135, 153, 111, 0.1);
+}
+
+.kavali-contact .contact-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(135, 153, 111, 0.15);
+  border-color: rgba(117, 138, 94, 0.5);
+}
+
+.kavali-contact .contact-card-interactive::before {
+  background: linear-gradient(90deg, transparent, #87996f, transparent);
+}
+
+.kavali-contact .contact-card-icon-button .icon-button-circle {
+  background: linear-gradient(135deg, #87996f 0%, #758a5e 100%);
+  box-shadow: 0 4px 16px rgba(135, 153, 111, 0.35);
+}
+
+.kavali-contact .contact-card-icon-button .icon-button-glow {
+  background: radial-gradient(circle, rgba(135, 153, 111, 0.35) 0%, transparent 70%);
+}
+
+.kavali-contact .contact-card-title {
+  color: #758a5e;
+}
+
+.kavali-contact .contact-card-interactive:hover .contact-card-title {
+  color: #5a6b47;
+}
+
+.kavali-contact .contact-card-action {
+  color: #87996f;
+}
+
+.kavali-contact .contact-card-action::after {
+  background: #87996f;
+}
+
+@media (min-width: 640px) {
+  .kavali-contact .contact-info-grid {
+    padding: 24px 20px 32px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 860px) {
+  .kavali-contact .contact-content h2 {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+  }
+
+  .kavali-contact .contact-info-grid {
+    padding: 18px 16px 24px;
+    gap: 14px;
+  }
 }
 
 @media (min-width: 640px) {

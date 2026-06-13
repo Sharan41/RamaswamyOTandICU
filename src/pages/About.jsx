@@ -6,7 +6,7 @@ import PhotoGallery from '../components/PhotoGallery'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400&quality=80'
 import directorImage from '../assets/profile pic.jpeg?format=webp&w=600&quality=80'
 import rakshanaImage from '../assets/rakshana pic.jpeg'
-import bannerLogo from '../assets/WhatsApp Image 2025-10-24 at 17.45.03.jpeg?format=webp&w=450&quality=80'
+import bannerLogo from '../assets/new page logo copy.jpeg'
 
 // Import all facility images - optimized for gallery display (WebP only)
 import hospitalExterior from '../assets/wetransfer_r0011365-jpg_2025-10-19_1050/WhatsApp Image 2025-10-23 at 18.14.30.jpeg?w=800&format=webp&quality=75'
@@ -99,25 +99,6 @@ export default function About() {
     { src: facility37, alt: "Medical Infrastructure", caption: "Modern Medical Infrastructure" }
   ]
 
-  const values = [
-    { 
-      title: t.about.value1Title,
-      description: t.about.value1Desc
-    },
-    {
-      title: t.about.value2Title, 
-      description: t.about.value2Desc
-    },
-    {
-      title: t.about.value3Title,
-      description: t.about.value3Desc
-    },
-    {
-      title: t.about.value4Title,
-      description: t.about.value4Desc
-    }
-  ]
-
   return (
     <section className="section">
       {/* Hero Section */}
@@ -135,7 +116,7 @@ export default function About() {
           <div className="about-hero-image animated-hospital-image">
             <div className="about-hero-image-pattern"></div>
             <div className="image-glow-effect"></div>
-            <img src={hospitalExterior} alt="Dr.RAMASWAMY HOSPITALS - Main Building" className="hospital-building-img" />
+            <img src={bannerLogo} alt="Dr. Ramaswamy Hospitals OT and ICU Care" className="about-hero-logo-img" />
             <div className="about-hero-image-caption">{t.about.heroCaption}</div>
           </div>
         </ScaleIn>
@@ -174,22 +155,6 @@ export default function About() {
           </div>
         </div>
       </FadeIn>
-
-      {/* Our Values */}
-      <div style={{ marginTop: 80 }}>
-        <FadeIn>
-          <h2 className="section-heading">{t.about.coreValues}</h2>
-        </FadeIn>
-        <StaggerContainer className="values-grid">
-          {values.map((value, index) => (
-            <div key={index} className="value-card">
-              <div className="value-number">{String(index + 1).padStart(2, '0')}</div>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
-            </div>
-          ))}
-        </StaggerContainer>
-      </div>
 
       {/* Leadership */}
       <div style={{ marginTop: 80 }}>

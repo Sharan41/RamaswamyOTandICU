@@ -133,10 +133,10 @@ export default function Contact() {
 
       {/* Section 2: Consultations — Kavali Division */}
       <div className="contact-page-section">
-        <div className="contact-section-header consultations">
-          <h2>{t.contact.sectionConsultations}</h2>
-        </div>
-        <StaggerContainer className="contact-info-grid">
+        <div className="kavali-contact">
+          <div className="contact-content">
+            <h2>{t.contact.sectionConsultations}</h2>
+            <StaggerContainer className="contact-info-grid">
         <a 
           href="https://maps.app.goo.gl/zX87qZGbq7jb5Qjs7" 
           target="_blank" 
@@ -238,7 +238,9 @@ export default function Contact() {
             <div className="contact-hours-item">{t.contact.sunday}</div>
           </div>
         </div>
-      </StaggerContainer>
+            </StaggerContainer>
+          </div>
+        </div>
       </div>
 
       {/* Find Us / Google Maps Location — entire section commented out
@@ -315,6 +317,14 @@ export default function Contact() {
                   <option value="Feedback on Staffs">{t.contact.feedbackOnStaffs}</option>
                   <option value="Feedback on Doctors">{t.contact.feedbackOnDoctors}</option>
                   <option value="custom">{t.contact.other}</option>
+                </select>
+              </div>
+              <div className="contact-form-group">
+                <label htmlFor="contact-branch" className="visually-hidden">{t.contact.selectBranch} *</label>
+                <select id="contact-branch" name="branch" required aria-required="true">
+                  <option value="">{t.contact.selectBranch} *</option>
+                  <option value="Nellore">{t.contact.branchNellore}</option>
+                  <option value="Kavali">{t.contact.branchKavali}</option>
                 </select>
               </div>
             </div>

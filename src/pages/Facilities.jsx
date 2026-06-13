@@ -98,7 +98,7 @@ export default function Facilities() {
     'Higher-end portable X-ray which is taken care by highly trained staff.',
     'Around the clock duty doctors to serve and take good care of the patients.',
   ]
-
+  
   return (
     <section className="section">
       {/* Hero Section with Background Image */}
