@@ -166,16 +166,17 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 }
 
 .topbar-whatsapp {
-  background: #25D366;
+  background: var(--brand-light);
   color: white;
-  border: 1px solid #1fb855;
+  border: 1px solid var(--brand-light);
 }
 
 .topbar-whatsapp-wrap:hover .topbar-whatsapp-trigger,
 .topbar-whatsapp-wrap.whatsapp-open .topbar-whatsapp-trigger {
-  background: #1fb855;
+  background: var(--accent-light);
+  border-color: var(--accent-light);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 187, 209, 0.35);
 }
 
 .topbar-whatsapp-tooltip {
