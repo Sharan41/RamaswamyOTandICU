@@ -27,7 +27,7 @@ class ErrorBoundary extends Component {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '20px',
-          background: 'linear-gradient(135deg, #2a5b6c, #3a7a8f)',
+          background: 'linear-gradient(135deg, #00bbd1, #00e0ea)',
           color: 'white'
         }}>
           <div style={{
@@ -48,7 +48,7 @@ class ErrorBoundary extends Component {
               onClick={() => window.location.reload()}
               style={{
                 background: 'white',
-                color: '#2a5b6c',
+                color: '#00bbd1',
                 border: 'none',
                 padding: '12px 24px',
                 borderRadius: '8px',
