@@ -23,7 +23,7 @@ export const translations = {
     },
     emergencyBar: {
       text: 'Emergency?',
-      callNow: 'Call Now: +91 99127 57854',
+      callNow: 'Call Now: +91 75993 07777',
       or: 'or',
       whatsapp: 'WhatsApp Us',
       available247: '24/7 Available'
@@ -607,7 +607,7 @@ export const translations = {
     },
     emergencyBar: {
       text: 'ఎమర్జెన్సీ?',
-      callNow: 'ఇప్పుడే కాల్ చేయండి: +91 99127 57854',
+      callNow: 'ఇప్పుడే కాల్ చేయండి: +91 75993 07777',
       or: 'లేదా',
       whatsapp: 'వాట్సాప్ చేయండి',
       available247: '24/7 అందుబాటులో'

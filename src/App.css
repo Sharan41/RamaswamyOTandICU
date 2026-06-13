@@ -454,12 +454,18 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
 }
 
 .brand-banner-logo {
-  height: 80px;
+  height: 60px;
   width: auto;
   object-fit: contain;
   transition: all 0.3s ease;
   flex-shrink: 1;
-  max-width: 200px; /* Restored to match About/Services/Testimonials pages */
+  max-width: 200px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  mix-blend-mode: multiply;
+  filter: saturate(1.2) hue-rotate(10deg);
 }
 
 .brand:hover .brand-banner-logo {
@@ -517,14 +523,13 @@ a, button, select, [role="button"], [type="button"], [type="submit"], [type="res
   color: var(--white); 
   box-shadow: var(--shadow-sm);
 }
-/* OT & ICU Care: always use light beige + dark teal (default and hover) */
-.nav a[href="/ot-icu-care"],
-.nav a[href="/ot-icu-care"]:hover,
-.nav a[href="/ot-icu-care"].active,
-.nav a[href="/ot-icu-care"].active:hover {
-  background: #EDECE4;
-  color: #3F6E7B;
+/* Consultation: always highlighted in dark navy */
+.nav a[href="https://www.ramaswamyhospitals.com/"],
+.nav a[href="https://www.ramaswamyhospitals.com/"]:hover {
+  background: var(--brand-light);
+  color: var(--white);
   box-shadow: var(--shadow-sm);
+  border-radius: 8px;
   transform: none;
 }
 .nav a:active {
@@ -1582,7 +1587,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 187, 209, 0.95);
+  background: rgba(31, 62, 117, 0.95);
   backdrop-filter: blur(8px);
   z-index: 9998;
   animation: fadeIn 0.3s ease-out;
@@ -2170,13 +2175,11 @@ body {
   font-weight: 600;
 }
 /* OT & ICU Care in mobile: same light beige + dark teal (default and hover) */
-.mobile-menu a[href="/ot-icu-care"],
-.mobile-menu a[href="/ot-icu-care"]:hover,
-.mobile-menu a[href="/ot-icu-care"].active,
-.mobile-menu a[href="/ot-icu-care"].active:hover {
-  background: linear-gradient(90deg, #EDECE4, transparent);
-  color: #3F6E7B;
-  border-left-color: #3F6E7B;
+.mobile-menu a[href="https://www.ramaswamyhospitals.com/"],
+.mobile-menu a[href="https://www.ramaswamyhospitals.com/"]:hover {
+  background: linear-gradient(90deg, var(--brand-light), transparent);
+  color: var(--white);
+  border-left-color: var(--brand-light);
   font-weight: 600;
 }
 
@@ -5941,7 +5944,7 @@ body {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 187, 209, 0.95);
+  background: rgba(31, 62, 117, 0.95);
   backdrop-filter: blur(10px);
   color: white;
   padding: 10px 24px;
@@ -5952,8 +5955,8 @@ body {
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 20px rgba(0, 187, 209, 0.3);
-  border: 2px solid var(--brand-light);
+  box-shadow: 0 4px 20px rgba(31, 62, 117, 0.3);
+  border: 2px solid var(--brand);
   transition: all 0.3s ease;
 }
 
