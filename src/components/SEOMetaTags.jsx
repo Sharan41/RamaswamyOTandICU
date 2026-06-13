@@ -10,7 +10,7 @@ export default function SEOMetaTags() {
     // Define SEO data for each route
     const seoData = {
       '/': {
-        title: 'Dr.Ramaswamy Hospitals | Home',
+        title: 'Dr. Ramaswamy Hospitals - OT and ICU Care | Home',
         description: 'Dr.Ramaswamy Hospitals - Kavali\'s first Super Speciality Hospital. Leading hospitals in Kavali with 25+ years of trusted healthcare. Best Kavali ortho hospital, 24/7 emergency, ICU, dialysis services in Kavali, Nellore.',
         keywords: 'hospitals in kavali, kavali super speciality hospital, kavali ortho hospital, orthopedic hospital kavali, best hospital in kavali, multi specialty hospital kavali, dialysis center kavali, ICU kavali, emergency hospital kavali, ramaswamy hospitals kavali, dr ramaswamy hospitals, hospital kavali nellore, super speciality hospital nellore',
         ogTitle: 'Dr.Ramaswamy Hospitals | Kavali Super Speciality Hospital',

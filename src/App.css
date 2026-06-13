@@ -5833,7 +5833,7 @@ body {
   gap: 64px;
   align-items: center;
   padding: 80px 0;
-  min-height: 85vh;
+  min-height: 80vh;
   position: relative;
   overflow: hidden;
 }
@@ -5894,14 +5894,12 @@ body {
 
 .hero-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
 .hero-video-overlay {
@@ -5984,13 +5982,17 @@ body {
 .hero-subtitle-new {
   font-size: 1.25rem;
   line-height: 1.8;
-  color: var(--text);
-  margin-bottom: 40px;
+  color: #000;
+  margin-bottom: 20px;
   font-weight: 500;
-  text-shadow: 
-    2px 2px 8px rgba(255, 255, 255, 0.95),
-    -1px -1px 4px rgba(255, 255, 255, 0.9),
-    0 0 20px rgba(255, 255, 255, 0.7);
+  text-shadow:
+    1px 1px 3px rgba(255, 255, 255, 0.5),
+    0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.hero-subtitle-new strong {
+  font-weight: 800;
+  color: #000;
 }
 
 .hero-actions {
@@ -6034,6 +6036,95 @@ body {
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(42, 91, 108, 0.4);
   filter: drop-shadow(0 5px 20px rgba(42, 91, 108, 0.3));
+}
+
+/* Why Choose Us Section (Home) */
+.home-why-choose-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 16px;
+}
+
+.home-why-choose-card {
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  border-radius: 20px;
+  padding: 40px 44px;
+  color: var(--white);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-why-choose-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+}
+
+.home-why-choose-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 24px;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.home-why-choose-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-why-choose-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.home-why-choose-list li svg {
+  flex-shrink: 0;
+  color: #a8e6cf;
+}
+
+.home-why-choose-tagline {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-why-choose-section {
+    padding: 32px 16px 8px;
+  }
+  .home-why-choose-card {
+    padding: 28px 24px;
+  }
+  .home-why-choose-title {
+    font-size: 1.35rem;
+  }
+  .home-why-choose-list li {
+    font-size: 0.95rem;
+  }
+  .home-why-choose-tagline {
+    font-size: 1rem;
+  }
 }
 
 /* Home Stats Section */
@@ -6168,6 +6259,125 @@ body {
   font-weight: 500;
   position: relative;
   z-index: 1;
+}
+
+/* OT & ICU Care Card */
+.home-ot-icu-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-ot-icu-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-ot-icu-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--brand), var(--brand-light), var(--accent));
+}
+
+.home-ot-icu-header {
+  margin-bottom: 20px;
+}
+
+.home-ot-icu-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  color: var(--white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.home-ot-icu-card h3 {
+  color: var(--brand);
+  font-size: 1.8rem;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.home-ot-icu-subtitle {
+  color: var(--muted);
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+}
+
+.home-ot-icu-desc {
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.home-ot-icu-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.home-ot-icu-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.home-ot-icu-feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(42, 91, 108, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--brand);
+}
+
+.home-ot-icu-cta-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(42, 91, 108, 0.1);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .home-ot-icu-section {
+    padding: 0 16px;
+  }
+  .home-ot-icu-card {
+    padding: 32px 24px;
+  }
+  .home-ot-icu-card h3 {
+    font-size: 1.4rem;
+  }
+  .home-ot-icu-features {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Leader Section */
@@ -7141,6 +7351,62 @@ body {
 }
 
 .linkedin-follow-btn svg {
+  position: relative;
+  z-index: 1;
+}
+
+/* YouTube embed wrapper */
+.youtube-embed-wrapper {
+  margin-bottom: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.youtube-follow-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 28px;
+  background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.35);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-follow-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.youtube-follow-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.youtube-follow-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+}
+
+.youtube-follow-btn svg {
   position: relative;
   z-index: 1;
 }
@@ -8717,9 +8983,9 @@ body {
   /* Home Page Mobile Improvements */
   .hero-section-new {
     grid-template-columns: 1fr;
-    padding: 40px 20px;
+    padding: 60px 20px;
     gap: 32px;
-    min-height: 90vh;
+    min-height: 75vh;
   }
 
   .hero-video-overlay {
@@ -8766,20 +9032,16 @@ body {
   .hero-subtitle-new {
     font-size: 1.05rem;
     line-height: 1.65;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
     font-weight: 600;
-    text-shadow: 
-      2px 2px 8px rgba(255, 255, 255, 1),
-      -1px -1px 4px rgba(255, 255, 255, 0.95),
-      0 0 20px rgba(255, 255, 255, 0.85);
+    color: #000;
+    text-shadow:
+      1px 1px 3px rgba(255, 255, 255, 0.5),
+      0 0 8px rgba(255, 255, 255, 0.3);
   }
 
   .hero-subtitle-new strong {
     font-weight: 800;
-    text-shadow: 
-      2px 2px 10px rgba(255, 255, 255, 1),
-      -1px -1px 5px rgba(255, 255, 255, 1),
-      0 0 25px rgba(255, 255, 255, 0.95);
   }
 
   .hero-actions {
@@ -9001,6 +9263,7 @@ body {
     order: 2;
   }
 
+  .youtube-follow-btn,
   .instagram-follow-btn,
   .facebook-follow-btn,
   .linkedin-follow-btn {

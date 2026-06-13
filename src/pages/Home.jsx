@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import bannerLogo from '../assets/banner-logo-new.jpeg?format=webp&w=450&quality=80'
 import leaderImage from '../assets/WhatsApp Image 2025-10-14 at 13.15.06 (1).jpeg?format=webp&w=400&quality=80'
-import heroVideo from '../assets/WhatsApp Video 2025-10-24 at 11.10.44.mp4'
+import heroVideo from '../assets/Infra video-compressed.mp4'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
@@ -15,36 +15,7 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef(null)
-  const [achievementIndex, setAchievementIndex] = useState(0)
   const [testimonialIndex, setTestimonialIndex] = useState(0)
-  
-  // Achievement carousel data - Using full descriptions from achievements page
-  const achievementCards = [
-    { 
-      title: t.achievements?.msmchTitle || 'First MSMCH Ortho in Kavali',
-      description: t.achievements?.msmchDesc || 'Dr. Ramaswamy Hospitals takes immense pride in being the first hospital in Kavali to have an MSMCH-qualified Orthopaedic Surgeon. This achievement brought a new era of advanced orthopaedic care, introducing evidence-based treatments, modern surgical techniques, and a higher standard of patient management to the region.'
-    },
-    { 
-      title: t.achievements?.thr2005Title || 'First Total Hip Replacement (THR) in Kavali - 2005',
-      description: t.achievements?.thr2005Desc || 'In 2005, our hospital achieved a historic milestone by performing the first-ever Total Hip Replacement surgery in Kavali. This complex procedure restored mobility and reduced chronic pain for patients suffering from severe hip arthritis, fractures, and degenerative conditions.'
-    },
-    { 
-      title: t.achievements?.goldenKneeTitle || 'First Total Knee Replacement (TKR) - Golden Knee in Kavali',
-      description: t.achievements?.goldenKneeDesc || 'We proudly performed Kavali\'s first Total Knee Replacement, also known as the Golden Knee Replacement, using advanced implant materials designed for durability and longevity. This procedure has transformed the lives of countless patients with end-stage arthritis.'
-    },
-    { 
-      title: t.achievements?.shoulderReplacementTitle || 'First Shoulder Replacement in Kavali',
-      description: t.achievements?.shoulderReplacementDesc || 'Our team accomplished another breakthrough by performing the first Shoulder Replacement surgery in Kavali. This procedure helps patients suffering from severe shoulder arthritis, fractures, or rotator cuff injuries regain motion and comfort.'
-    },
-    { 
-      title: t.achievements?.surgicalVolumeTitle || 'High Surgical Volume - 130 to 150 Surgeries Monthly',
-      description: t.achievements?.surgicalVolumeDesc || 'With an average of 130–150 surgeries every month, Dr. Ramaswamy Hospitals is one of the most active surgical centers in the region. This high surgical load reflects the trust placed in us by patients and the community.'
-    },
-    { 
-      title: t.achievements?.tumourProceduresTitle || 'Comprehensive Tumour Procedures',
-      description: t.achievements?.tumourProceduresDesc || 'Our orthopaedic oncology division handles a wide spectrum of bone tumour surgeries, including tumour excision, limb-sparing procedures, and reconstruction, ensuring preservation of limb function and appearance.'
-    }
-  ]
   
   // Testimonial carousel data
   const testimonialCards = [
@@ -67,15 +38,6 @@ export default function Home() {
       quote: t.home?.testimonial3Quote || 'Life-changing surgery experience. The post-operative care was exceptional and recovery was smooth.'
     }
   ]
-  
-  // Auto-rotate achievement cards (increased duration for longer descriptions)
-  useEffect(() => {
-    const achievementTimer = setInterval(() => {
-      setAchievementIndex((prev) => (prev + 1) % achievementCards.length)
-    }, 5000)
-    
-    return () => clearInterval(achievementTimer)
-  }, [])
   
   // Auto-rotate testimonial cards
   useEffect(() => {
@@ -335,6 +297,99 @@ export default function Home() {
         </section>
       </ScaleIn>
 
+      {/* Looking for OT & ICU Care Card */}
+      <FadeIn>
+        <div className="home-ot-icu-section">
+          <div className="home-ot-icu-card">
+            <div className="home-ot-icu-header">
+              <div className="home-ot-icu-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M12 8v8"/>
+                  <path d="M8 12h8"/>
+                </svg>
+                OT & ICU
+              </div>
+              <h3>{t.home.lookingForOtIcu}</h3>
+              <p className="home-ot-icu-subtitle">{t.home.lookingForOtIcuSubtitle}</p>
+            </div>
+            <p className="home-ot-icu-desc">{t.home.lookingForOtIcuDesc}</p>
+            <div className="home-ot-icu-features">
+              <div className="home-ot-icu-feature">
+                <div className="home-ot-icu-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M3 9h18"/>
+                    <path d="M9 21V9"/>
+                  </svg>
+                </div>
+                <span>{t.home.lookingForOtIcuFeature1}</span>
+              </div>
+              <div className="home-ot-icu-feature">
+                <div className="home-ot-icu-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                  </svg>
+                </div>
+                <span>{t.home.lookingForOtIcuFeature2}</span>
+              </div>
+              <div className="home-ot-icu-feature">
+                <div className="home-ot-icu-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <span>{t.home.lookingForOtIcuFeature3}</span>
+              </div>
+              <div className="home-ot-icu-feature">
+                <div className="home-ot-icu-feature-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+                <span>{t.home.lookingForOtIcuFeature4}</span>
+              </div>
+            </div>
+            <p className="home-ot-icu-cta-text">{t.home.lookingForOtIcuCta}</p>
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* Why Choose Us Section */}
+      <FadeIn>
+        <section className="home-why-choose-section">
+          <div className="home-why-choose-card">
+            <h2 className="home-why-choose-title">{t.home.heroWhyChooseTitle}</h2>
+            <ul className="home-why-choose-list">
+              <li>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t.home.heroWhyChoose1}
+              </li>
+              <li>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t.home.heroWhyChoose2}
+              </li>
+              <li>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t.home.heroWhyChoose3}
+              </li>
+              <li>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t.home.heroWhyChoose4}
+              </li>
+              <li>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                {t.home.heroWhyChoose5}
+              </li>
+            </ul>
+            <p className="home-why-choose-tagline">{t.home.heroWhyChooseTagline}</p>
+          </div>
+        </section>
+      </FadeIn>
+
       {/* Leader Section */}
       <FadeIn>
         <div className="home-leader-section">
@@ -382,115 +437,6 @@ export default function Home() {
           </div>
         </FadeIn>
       </section>
-
-      {/* Quick Services Preview */}
-      <FadeIn>
-        <section className="home-quick-services">
-          <h2>{t.home.quickAccess}</h2>
-          <StaggerContainer className="quick-services-grid">
-            <Link to="/doctors" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
-              <div className="quick-service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                  <circle cx="12" cy="7" r="4"/>
-                </svg>
-              </div>
-              <h3>{t.home.findDoctor}</h3>
-              <p>{t.home.findDoctorDesc}</p>
-            </Link>
-            <Link to="/services" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
-              <div className="quick-service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                </svg>
-              </div>
-              <h3>{t.home.ourServicesCard}</h3>
-              <p>{t.home.ourServicesCardDesc}</p>
-            </Link>
-            <a href="tel:+919912757854" className="quick-service-card">
-              <div className="quick-service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-              </div>
-              <h3>{t.home.emergencyCareCard}</h3>
-              <p>{t.home.emergencyCareCardDesc}</p>
-            </a>
-            <Link to="/facilities" className="quick-service-card" onClick={() => window.scrollTo(0, 0)}>
-              <div className="quick-service-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2"/>
-                  <path d="M3 9h18"/>
-                  <path d="M9 21V9"/>
-                </svg>
-              </div>
-              <h3>{t.home.ourFacilitiesCard}</h3>
-              <p>{t.home.ourFacilitiesCardDesc}</p>
-            </Link>
-          </StaggerContainer>
-        </section>
-      </FadeIn>
-
-      {/* Achievements Sneak Peek */}
-      <FadeIn>
-        <section className="home-sneak-peek-section achievements-preview">
-          <div className="sneak-peek-card">
-            <div className="sneak-peek-content">
-              <div className="sneak-peek-badge">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                {t.home.achievementsBadge}
-              </div>
-              <h2>{t.home.achievementsTitle}</h2>
-              <p>{t.home.achievementsDesc}</p>
-              <div className="sneak-peek-stats">
-                <div className="peek-stat">
-                  <div className="peek-stat-number">16+</div>
-                  <div className="peek-stat-label">{t.home.achievementsMilestones}</div>
-                </div>
-                <div className="peek-stat">
-                  <div className="peek-stat-number">25+</div>
-                  <div className="peek-stat-label">{t.home.achievementsYears}</div>
-                </div>
-                <div className="peek-stat">
-                  <div className="peek-stat-number">150+</div>
-                  <div className="peek-stat-label">{t.home.achievementsSurgeries}</div>
-                </div>
-              </div>
-              <Link to="/achievements" className="sneak-peek-cta" onClick={() => window.scrollTo(0, 0)}>
-                {t.home.achievementsCTA}
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
-            </div>
-            <div className="sneak-peek-visual achievements-visual">
-              <div className="carousel-container">
-                {achievementCards.map((card, index) => (
-                  <div 
-                    key={index}
-                    className={`carousel-card achievement-card ${index === achievementIndex ? 'active' : ''}`}
-                  >
-                    <h3 className="carousel-card-title">{card.title}</h3>
-                    <p className="carousel-card-desc">{card.description}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="carousel-dots">
-                {achievementCards.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`dot ${index === achievementIndex ? 'active' : ''}`}
-                    onClick={() => setAchievementIndex(index)}
-                    aria-label={`Go to achievement ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </FadeIn>
 
       {/* Testimonials Sneak Peek */}
       <FadeIn>
@@ -606,6 +552,18 @@ export default function Home() {
             </div>
             
             <div className="social-corner-cta">
+              <a 
+                href="https://www.youtube.com/@Dr.RamaswamyHospitals" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="youtube-follow-btn"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                {t.home.followYouTube || 'Follow us on YouTube'}
+              </a>
+
               <a 
                 href="https://www.instagram.com/drramaswamyhospitals_kavali/" 
                 target="_blank" 

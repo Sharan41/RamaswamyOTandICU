@@ -229,8 +229,6 @@ function App() {
               </div>
             </div>
             <NavLink to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
-            <NavLink to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
-            <NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
             <div
               ref={blogsRef}
               className={`dropdown ${blogsOpen ? 'open' : ''}`}
@@ -277,8 +275,6 @@ function App() {
           <NavLink onClick={() => setMobileOpen(false)} to="/services" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.services}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/facilities" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.facilities}</NavLink>
           <NavLink onClick={() => setMobileOpen(false)} to="/ot-icu-care" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.otIcuCare}</NavLink>
-          <NavLink onClick={() => setMobileOpen(false)} to="/doctors" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.doctors}</NavLink>
-          <NavLink onClick={() => setMobileOpen(false)} to="/achievements" className={({ isActive }) => isActive ? 'active' : undefined}>{t.nav.achievements}</NavLink>
           <a
             href="https://thebluesinge.wixsite.com/beyond-treatment"
             onClick={() => setMobileOpen(false)}
