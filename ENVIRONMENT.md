@@ -36,7 +36,7 @@ Some configuration is hard-coded in the source:
 
 **Social Media Links** (`src/App.jsx`):
 ```javascript
-- Instagram: https://www.instagram.com/drramaswamyhospitals/
+- Instagram: https://www.instagram.com/drramaswamyhospitals_kavali/
 - Linktree: https://linktr.ee/drramaswamyhospitals
 ```
 
@@ -394,7 +394,7 @@ If moving from hard-coded to environment variables:
 VITE_PHONE=+919912757854
 VITE_WHATSAPP=+919912757854
 VITE_EMAIL=info@ramaswamyhospitals.com
-VITE_INSTAGRAM=https://www.instagram.com/drramaswamyhospitals/
+VITE_INSTAGRAM=https://www.instagram.com/drramaswamyhospitals_kavali/
 VITE_LINKTREE=https://linktr.ee/drramaswamyhospitals
 VITE_MAPS_LAT=14.916762299999998
 VITE_MAPS_LNG=79.9951669
@@ -411,7 +411,7 @@ export const config = {
     email: import.meta.env.VITE_EMAIL || 'info@ramaswamyhospitals.com',
   },
   social: {
-    instagram: import.meta.env.VITE_INSTAGRAM || 'https://www.instagram.com/drramaswamyhospitals/',
+    instagram: import.meta.env.VITE_INSTAGRAM || 'https://www.instagram.com/drramaswamyhospitals_kavali/',
     linktree: import.meta.env.VITE_LINKTREE || 'https://linktr.ee/drramaswamyhospitals',
   },
   maps: {
@@ -486,7 +486,7 @@ VITE_WHATSAPP=+919912757854
 VITE_EMAIL=info@ramaswamyhospitals.com
 
 # Social Media
-VITE_INSTAGRAM_URL=https://www.instagram.com/drramaswamyhospitals/
+VITE_INSTAGRAM_URL=https://www.instagram.com/drramaswamyhospitals_kavali/
 VITE_LINKTREE_URL=https://linktr.ee/drramaswamyhospitals
 
 # Feature Flags

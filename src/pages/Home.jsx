@@ -569,7 +569,7 @@ export default function Home() {
             {/* Instagram Widget - Desktop Only */}
             <div className="instagram-embed-wrapper instagram-desktop-only">
               <iframe
-                src="https://www.instagram.com/drramaswamyhospitals/embed/"
+                src="https://www.instagram.com/drramaswamyhospitals_kavali/embed/"
                 width="100%"
                 height="480"
                 frameBorder="0"
@@ -583,7 +583,7 @@ export default function Home() {
             {/* Instagram Preview Card - Mobile Only */}
             <div className="instagram-embed-wrapper instagram-mobile-only">
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals/" 
+                href="https://www.instagram.com/drramaswamyhospitals_kavali/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="instagram-preview-card"
@@ -607,7 +607,7 @@ export default function Home() {
             
             <div className="social-corner-cta">
               <a 
-                href="https://www.instagram.com/drramaswamyhospitals/" 
+                href="https://www.instagram.com/drramaswamyhospitals_kavali/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="instagram-follow-btn"

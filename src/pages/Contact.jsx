@@ -44,7 +44,7 @@ export default function Contact() {
       name: t.contact.instagram, 
       desc: t.contact.instagramText,
       icon: "IG",
-      url: "https://www.instagram.com/drramaswamyhospitals/"
+      url: "https://www.instagram.com/drramaswamyhospitals_kavali/"
     },
     { 
       name: t.contact.linktree, 

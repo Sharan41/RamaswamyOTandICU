@@ -24,7 +24,7 @@ Andhra Pradesh, India
 
 ### Social Media
 
-- **Instagram**: [@drramaswamyhospitals](https://www.instagram.com/drramaswamyhospitals/)
+- **Instagram**: [@drramaswamyhospitals_kavali](https://www.instagram.com/drramaswamyhospitals_kavali/)
 - **Linktree**: [linktr.ee/drramaswamyhospitals](https://linktr.ee/drramaswamyhospitals)
 
 ### Hours
