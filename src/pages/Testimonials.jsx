@@ -3,7 +3,6 @@ import { useI18n } from '../i18n'
 import { FadeIn, StaggerContainer, ScaleIn } from '../components/AnimatedSection'
 import { ParallaxSection } from '../components/ParallaxSection'
 import CountUp from '../components/CountUp'
-import { ChevronDown } from 'lucide-react'
 
 export default function Testimonials() {
   const { t } = useI18n()
@@ -116,35 +115,6 @@ export default function Testimonials() {
     setTimeout(() => setIsPaused(false), 3000) // Resume after 3 seconds
   }
 
-  // FAQ Data
-  const faqs = [
-    {
-      question: t.testimonials.faq1Question,
-      answer: t.testimonials.faq1Answer
-    },
-    {
-      question: t.testimonials.faq2Question,
-      answer: t.testimonials.faq2Answer
-    },
-    {
-      question: t.testimonials.faq3Question,
-      answer: t.testimonials.faq3Answer
-    },
-    {
-      question: t.testimonials.faq4Question,
-      answer: t.testimonials.faq4Answer
-    },
-    {
-      question: t.testimonials.faq5Question,
-      answer: t.testimonials.faq5Answer
-    }
-  ]
-
-  const [openFAQ, setOpenFAQ] = useState(null)
-
-  const toggleFAQ = (index) => {
-    setOpenFAQ(openFAQ === index ? null : index)
-  }
   
   return (
     <section className="section">
@@ -268,48 +238,6 @@ export default function Testimonials() {
         </StaggerContainer>
       </div>
 
-      {/* FAQ Section */}
-      <FadeIn>
-        <div style={{ marginTop: 80 }}>
-          <div className="faq-section-header">
-            <h2 className="faq-section-title">{t.testimonials.faqTitle}</h2>
-            <p className="faq-section-subtitle">
-              {t.testimonials.faqSubtitle}
-            </p>
-          </div>
-
-          <div className="faq-container">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className={`faq-item ${openFAQ === index ? 'faq-item-open' : ''}`}
-              >
-                <button
-                  className="faq-question"
-                  onClick={() => toggleFAQ(index)}
-                  aria-expanded={openFAQ === index}
-                  aria-controls={`faq-answer-${index}`}
-                >
-                  <span className="faq-question-number">{String(index + 1).padStart(2, '0')}</span>
-                  <span className="faq-question-text">{faq.question}</span>
-                  <ChevronDown 
-                    className={`faq-chevron ${openFAQ === index ? 'faq-chevron-open' : ''}`} 
-                    size={20} 
-                  />
-                </button>
-                <div 
-                  className={`faq-answer ${openFAQ === index ? 'faq-answer-open' : ''}`}
-                  id={`faq-answer-${index}`}
-                >
-                  <div className="faq-answer-content">
-                    {faq.answer}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </FadeIn>
     </section>
   )
 }

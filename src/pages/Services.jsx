@@ -21,13 +21,6 @@ export default function Services() {
     'Varicose veins',
   ]
   
-  const highlights = [
-    { title: t.services.highlight1Title, desc: t.services.highlight1Desc },
-    { title: t.services.highlight2Title, desc: t.services.highlight2Desc },
-    { title: t.services.highlight3Title, desc: t.services.highlight3Desc },
-    { title: t.services.highlight4Title, desc: t.services.highlight4Desc }
-  ]
-
   return (
     <section className="section">
       {/* Hero Section with Background Image */}
@@ -50,21 +43,6 @@ export default function Services() {
           </div>
         </div>
       </FadeIn>
-
-      {/* Service Highlights */}
-      <ScaleIn>
-        <div className="service-highlights-container">
-          <StaggerContainer className="service-highlights-grid">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="service-highlight-item">
-                <div className="service-highlight-number">{String(index + 1).padStart(2, '0')}</div>
-                <h3>{highlight.title}</h3>
-                <p>{highlight.desc}</p>
-              </div>
-            ))}
-          </StaggerContainer>
-        </div>
-      </ScaleIn>
 
       {/* Specialities Grid */}
       <div style={{ marginTop: 64 }}>

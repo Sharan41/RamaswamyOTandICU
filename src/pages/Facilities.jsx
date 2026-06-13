@@ -98,25 +98,6 @@ export default function Facilities() {
     'Around the clock duty doctors to serve and take good care of the patients.',
   ]
 
-  const highlights = [
-    { 
-      title: t.facilities.highlight1Title,
-      desc: t.facilities.highlight1Desc
-    },
-    {
-      title: t.facilities.highlight2Title,
-      desc: t.facilities.highlight2Desc
-    },
-    {
-      title: t.facilities.highlight3Title,
-      desc: t.facilities.highlight3Desc
-    },
-    {
-      title: t.facilities.highlight4Title,
-      desc: t.facilities.highlight4Desc
-    }
-  ]
-  
   return (
     <section className="section">
       {/* Hero Section with Background Image */}
@@ -139,21 +120,6 @@ export default function Facilities() {
           </div>
         </div>
       </FadeIn>
-
-      {/* Highlights Section */}
-      <ScaleIn>
-        <div className="facilities-highlights-container">
-          <StaggerContainer className="facilities-highlights-grid">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="facility-highlight-item">
-                <div className="facility-highlight-badge">{String(index + 1).padStart(2, '0')}</div>
-                <h3>{highlight.title}</h3>
-                <p>{highlight.desc}</p>
-              </div>
-            ))}
-          </StaggerContainer>
-        </div>
-      </ScaleIn>
 
       {/* Facilities Grid */}
       <div style={{ marginTop: 64 }}>
